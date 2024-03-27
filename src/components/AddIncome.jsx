@@ -30,7 +30,7 @@ const AddIncome = () => {
     }).then(response => {
       if (response.data) {
         if (response.data.message === 'no token') {
-          navigate("/login")
+          navi("/login")
           toast.error("Session expired. Please login.");
           return; // Exit the function early to prevent further processing
       }
