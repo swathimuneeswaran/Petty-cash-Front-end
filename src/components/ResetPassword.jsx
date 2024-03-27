@@ -8,7 +8,7 @@ const ResetPassword = () => {
    
     const [password, setPassword] = useState("");
     const {token}=useParams()
-    const baseurl="http://localhost:5000"
+    const baseurl="https://petty-cash-back-end.onrender.com"
     
     const navigate=useNavigate()
   

@@ -8,7 +8,7 @@ const ForgotPassword = () => {
     const [email, setEmail] = useState("");
     const navigate = useNavigate();
 
-    const baseurl="http://localhost:5000"
+    const baseurl="https://petty-cash-back-end.onrender.com"
                
 
     const handleSubmit = (e) => {
