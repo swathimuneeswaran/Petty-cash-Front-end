@@ -27,7 +27,7 @@ const AddExpense = () => {
       description,
      
     }).then(response => {
-      if (response.data) {
+      if (response) {
         if (response.data.message === 'no token') {
           navigate("/login")
           toast.error("Session expired. Please login.");
