@@ -15,7 +15,7 @@ const AddIncome = () => {
   const [email,setEmail] = useState("");
   const baseurl="https://petty-cash-back-end.onrender.com"
 
-  const navi=useNavigate()
+  const navigate=useNavigate()
 
 
   const handleSubmit = async (e) => {
@@ -30,12 +30,12 @@ const AddIncome = () => {
     }).then(response => {
       if (response.data) {
         if (response.data.message === 'no token') {
-          navi("/login")
+          navigate("/login")
           toast.error("Session expired. Please login.");
           return; // Exit the function early to prevent further processing
       }
         toast.success("Your Income has been added💲")
-        navi("/profile");
+        navigate("/profile");
       }
       console.log(response);
     }).catch(err => {
