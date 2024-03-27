@@ -1,0 +1,528 @@
+.sign-up-container
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.sign-up-form
+{
+    width:350px;
+    padding:20px;
+    border:1px solid #ccc;
+    box-shadow: 5px 5px 6px 5px gray;
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+    color:aqua
+}
+
+label{
+    display:block;
+    margin-bottom: 8px;
+    color:aliceblue;
+}
+
+input{
+    width:100%;
+    padding:8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+button{
+    width:50%;
+ 
+    padding:10px;
+    background-color: rgb(7, 185, 255);
+    color:black;
+    font-style: italic;
+    font-size:medium;
+     font-weight: bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color: #235b93;
+    color:aqua
+}
+
+.con{
+   display: flex;
+   gap:30px;
+   width:700px;
+   position:absolute;
+   top:360px;
+   right:380px
+
+}
+
+img{
+    width: 100%;
+    position: relative;
+    
+}
+
+.but1
+{
+    background-color:rgb(247, 242, 240);
+    text-decoration: none;
+    border-radius:30px;
+    width:360px;
+    border:1px solid black;
+    
+}
+
+.but1:hover{
+    background-color: aquamarine;
+    color:black
+}
+
+.link1
+{
+    color:palevioletred;
+    font-style: italic;
+    font-weight: 800;
+    font-size:large;
+    text-decoration: none;
+}
+
+.link1:hover{
+    color:black
+}
+
+
+h2{
+    text-align: center;
+}
+
+.log
+{
+    float: right;
+    width:180px;
+    border-radius: 30px;
+    color:black;
+   text-decoration: none;
+   padding: 4px;
+   font-style: italic;
+   font-weight: 800;
+   font-size: larger;
+}
+
+
+.content
+{
+    margin-top:20px;
+   margin-bottom: 30px;
+   border-radius:60px;
+   
+    background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSDxAVFRUVFRUYFxUVFRUVFRUVFRcXFxUVFRUYHSggGBolHRUYITEhJSkrLi4uFx8zODMtNygtLisBCgoKDQ0NDg0PDisZFRkrKysrKy0rKystKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALcBEwMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAAAAQIDB//EACYQAQEAAgEDAwQDAQAAAAAAAAABEfACgcHRkaGxEjFx4SFBYVH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APDQAAAUAAACKAAKCKLgEwYaAZGsJgEStYTAIKAgqAgqAgoAioAAAAAAAAAqKACwAABcEi4AwuBcAmFXC/SDOFx3awuAYwNYLAZwljUhgGMDWDAMWJhuxmgyKgIKAgAAACLUAAAAAUAFIANSI1ATDUiyNQEwq77rICYXCzzvs1ZvsDMiydmsLYDE4ph0+neh9IOf0ph0xvRLxBzwmHSxLxBzrFjpYmAc7GW8IDI1hAQAEFQACggAAAKCgSLIkaAw1xI1AXC8YTfRqTegE8NcYv7awozx31ak7eFkbkBjjN6l4+7cnZqbu9wc6Wd/mNY7eVxv5v7ByvHv2JxdMb1TCDny4pXSzfdmz7dFHKsWOtjNgOViOlZqDGEw1YYBixMNWICC4QEKUoIAAqKAqKCxqMxuA1I1xm+yNQGsNSJhuRQxvVok7LN31Ax8XfdrBO3zZn4jU31AwYX9/JgCxJx3o1Z+f7/tL5BnCYa32OXe+0QYxv4jON6Olm+zPKfdRy5RnlHTlO/yzQc8MYdOUZsBmxl0YQYRvDNBKzWrGaCUpSggAKAAqKC8W4zxb4g1GuPaJxb4A1Jd/Dc8MzfZqKNTfT9rj7Jf76+GrvtjuCzfTKzx8p+2s/PxAaiyMz/N/vuoETHxVngt98eewJd9UxvXDU33Tj4Bnlvqn7+TH2/HlL4Bm76uddOW+jNgOdZsbtZqDLNa3fU5AxWa0zQSsVus0ESqlBAAUABUUFjbEbgOkbjnxbm+oOkb4ufHflvjcKNTfVYzxv2WeAb/AGv7Z4+N9muPgGs9yzv7MzerVoNfbf8AjO+kLe6W9+wLN+ULd6Jbvtv4Bbu9XKX7fifDXP8Avr4S/cGbu9WVrIM5SrWeW+6CVOS2s1RKi1EGalWsglSrUoIACgAKgCx04ubUB0jpxrlGpd3qDpxbm70c5u9G4o3d9F8sZ/7v8mQdJ471ri5S7u/w1kHTjd9d3K/pznJZQbl3qjMv23/Uz2BvLOe/ykqZ3qC8rvVm3epb2ZtAzvql5Jf93+Kzd9gKiZ7/AClu+gKyZRBayICVKVASlVKCAAoAAgDUWVlYDca4+GI1KDrxrXC9nKVqUHSUzu/ljJKDpPPzGrXP6llB0yuXP6t6me6jd30M9vhi8jO9AalTPZN9mfq3ogqSplLQOV3onKpaloGUTKZBrKZQABMglSlARFqAAAogAACrGVBqVZWYuQbiysSrkG2sueTIOmTLEq5BvPZc71YyfUDVvcywWg3alrOWbQbylrNqWg1eTOUyWgqZZyA1kyyAuUyAAJQEVAAAAAAAFiKCwSKAsqANZMpkBcqzkyDeSs5TIN5MsZMg3amWcmQW1DJkBDIAAAAAAAgAVAAAAAAAAABYACgAAAAAqAAAAAAACAAAAAAAAIAAAAAP/9k=");
+}
+
+.content2
+{
+    margin-top:20px;
+   margin-bottom: 30px;
+   border-radius:60px;
+    background-image: url("https://getwallpapers.com/wallpaper/full/2/8/2/902120-black-wallpaper-desktop-1920x1200-htc.jpg");
+}
+
+.content3
+{
+    margin-top:20px;
+   margin-bottom: 30px;
+   border-radius:60px;
+    background-image: url("https://images.pexels.com/photos/396547/pexels-photo-396547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+
+.content4
+{
+   margin-top:20px;
+   margin-bottom: 30px;
+   border-radius:60px;
+    background-image: url("https://wallpaperset.com/w/full/5/1/b/380289.jpg");
+}
+
+.income-image {
+    width: 200px;
+    border-top: 1px dotted black;
+    border-left: 1px dotted black;
+  }
+  
+  .expense-image {
+    width: 200px;
+    margin-left:200px;
+    border-top: 1px dotted black;
+    border-right: 1px dotted black;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  .sin:hover{
+     background-color: cyan;
+     color:black;
+  }
+
+  .income-table {
+    /* width: 30%; */
+    border-collapse: collapse;
+    margin: 30px;
+  }
+  /* @media screen and (max-width: 480px) {
+    .income-table {
+      width: 70%;
+      margin: 30px;
+      font-size: 30px; 
+    }
+  }
+   */
+  @media screen and (max-width: 390px) {
+    .income-table {
+      width: 60%;
+      margin: 30px;
+      font-size: 40px; /* Further decrease font size for even smaller screens */
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    .name {
+     
+      font-size: 40px; 
+      
+    }
+  }
+  @media screen and (max-width: 485px) {
+    .name {
+     
+      font-size: 20px; 
+      
+    }
+  }
+
+
+  .income-table th,
+  .income-table td {
+    padding: 8px;
+    border: 1px solid #181717;
+  }
+  
+  .income-table th {
+    background-color: #f2f2f2;
+  }
+
+
+  .email
+  {
+    color:white;
+    background-color:rgb(50, 49, 49);
+  }
+  
+
+  .email:hover
+  {
+    background-color: rgb(67, 66, 71);
+  }
+
+  .pro {
+    background-image: linear-gradient(to right, pink, rgb(230, 224, 224), rgb(223, 79, 79));
+    height: 100%;
+  }
+  
+  @media screen and (max-width: 280px) {
+    .pro {
+      background-image:linear-gradient(white,white,white)
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    .pro {
+      background-image:linear-gradient(white,white,white)
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .pro {
+      background-image:linear-gradient(white,white,white)
+    }
+  }
+
+
+ 
+
+  
+  @media screen and (max-width: 540px) {
+    .pro {
+      height: 400vh!important;
+      width: 200%!important;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .pro {
+      height: 200vh!important;
+      width: 240%!important;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .pro {
+      height: 150vh!important;
+      width: 300%;
+    }
+  }
+  
+  @media screen and (max-width: 915px) {
+    .pro {
+      height: 150vh;
+      width: 200%;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .pro {
+      height: 150vh;
+      width: 200%;
+    }
+  }
+  
+
+
+  /* .sign-up-form {
+  background-color: transparent;
+  width: 30%;
+} */
+
+
+@media screen and (max-width:768px) {
+  .sign-up-form{
+    width: 80%;
+    margin:0 auto
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sign-up-form {
+      width: 90%; /* Further adjust width for smaller screens */
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+      font-size: 14px; /* Decrease font size for inputs */
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .container {
+      width: 95%; /* Further adjust width for smaller screens */
+  }
+}
+
+
+/* Default styles */
+.container1 {
+  position: relative;
+  max-width: 1140px; /* Set maximum width for the container */
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 992px) {
+  .col-lg-5 {
+    flex: 0 0 100%; /* Change the column width to full width for smaller screens */
+    max-width: 100%;
+  }
+}
+
+/* Media query for extra small screens */
+@media screen and (max-width: 576px) {
+  .col-lg-5 {
+    margin-left: 0; /* Remove left margin for smaller screens */
+  }
+}
+
+.exp{
+  margin-left: 180px;
+  box-shadow: 6px 3px 6px 9px black;
+}
+
+@media screen and (max-width: 480px) {
+  .exp {
+    margin-left: 0;
+   padding-bottom: 40px;
+  
+  }
+}
+@media screen and (max-width: 580px) {
+  .exp {
+    margin-left: 0;
+    margin-top: 0px !important;;
+    bottom: 40px!important;
+    top: 40px !important;
+  }
+}
+@media screen and (max-width: 690px) {
+  .exp {
+    margin-left: 0;
+    margin-top: 0px !important;;
+    bottom: 40px!important;
+    top: 40px !important;
+  }
+}
+@media screen and (max-width: 790px) {
+  .exp {
+    margin-left: 0;
+    margin-top: 0px !important;;
+    bottom: 40px!important;
+    top: 40px !important;
+  }
+}
+
+
+
+.gif 
+{
+  width:300px;
+  margin-top: 40px;
+  margin-left: 100px;
+}
+
+@media screen and (max-width: 480px){
+.gif 
+{
+    width:100px;
+    margin-top:20px;
+    margin-left:10px;
+    margin-bottom:20px
+}
+}
+@media screen and (max-width: 913px){
+  .gif 
+  {
+    width: 0 !important;
+  }
+  }
+
+ 
+
+@media screen and (max-width: 480px){
+  .line 
+  {
+    margin:auto !important;
+  }
+}
+
+@media screen and (max-width: 480px){
+.mai 
+{
+  margin-top:40px;
+  width:500px !important;
+  height:70px;
+  
+}
+}
+
+
+@media screen and (max-width: 480px){
+  .mail 
+  {
+    margin-top:40px;
+   height:60px!important;
+    
+  }
+  }
+
+
+  @media screen and (max-width: 480px){
+    .watch
+    {
+       margin-top: 10px !important;
+      font-size:45px !important;
+    }
+  }
+
+
+  @media screen and (max-width: 480px){
+    .van
+    {
+       width:500px!important;
+       height:300px!important;
+       margin-left: 100px;
+       font-size:40px;
+    }
+  }
+  @media screen and (max-width: 590px){
+    .van
+    {
+       width:390px!important;
+       height:270px!important;
+       margin-left: 50px;
+       font-size:40px;
+    }
+  }
+
+  @media screen and (max-width: 390px){
+    .van
+    {
+
+       width:500px!important;
+       height:250px!important;
+       margin-left: 100px;
+    }
+  }
+
+  @media screen and (max-width: 300px){
+    .van
+    {
+       
+       width:500px!important;
+       height:250px!important;
+       margin-left: 100px;
+    }
+  }
+
+  @media screen and (max-width: 300px){
+    .box1
+    {
+       display: flex !important;;
+       flex-direction: column!important;
+       flex-wrap: wrap;
+       
+    }
+  }
+  @media screen and (max-width: 300px){
+    .box1
+    {
+       display: flex !important;;
+       flex-direction: column!important;
+       flex-wrap: wrap;
+       
+    }
+  }
+
+  @media screen and (max-width: 490px){
+    .van h3
+    {
+       font-size:40px !important;
+    }
+  }
+
+  @media screen and (max-width: 490px){
+    .tab
+    {
+       display:flex;
+       flex-direction: column;
+       
+    }
+  }
+
+
