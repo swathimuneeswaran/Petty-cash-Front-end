@@ -26,23 +26,22 @@ const AddIncome = () => {
       amount,
       category,
       description,
-      
     }).then(response => {
       if (response) {
-        toast.success("Your Income has been added💲")
+        toast.success("Your Income has been added💲");
         navigate("/profile");
-        if (response.data.message === 'no token') {
-          navigate("/login")
-          toast.error("Session expired. Please login.");
-          return; // Exit the function early to prevent further processing
+        // if (response.data.message === 'no token') {
+        //   navigate("/login");
+        //   toast.error("Session expired. Please login.");
+        //   return; 
+        // }
+        console.log(response);
       }
-        
-      }
-      console.log(response);
     }).catch(err => {
       console.log(err);
     });
   };
+  
 
   return (
     <>
