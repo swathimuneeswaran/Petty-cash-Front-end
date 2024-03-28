@@ -2,7 +2,7 @@ import React, {  useState } from "react";
 import Navbar from "./Navbar.jsx";
 import '../App.css'
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import Axios from "axios";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faIndianRupeeSign } from '@fortawesome/free-solid-svg-icons';
 import {toast} from "react-hot-toast"
@@ -26,12 +26,12 @@ const Profile = () => {
 
 
 
-  axios.defaults.withCredentials=true;
+  Axios.defaults.withCredentials=true;
   const baseurl = "https://petty-cash-back-end.onrender.com";
 
   const fetchIncomes = async () => {
     try {
-      const response = await axios.get(`${baseurl}/api/manager/get-incomes/${email}`);
+      const response = await Axios.get(`${baseurl}/api/manager/get-incomes/${email}`);
       console.log(response.data);
       if (response.data.message === 'no token') {
         navigate("/login")
@@ -60,7 +60,7 @@ const Profile = () => {
 
     // const id=incomes._id
      try{
-      const response=await axios.delete(`${baseurl}/api/manager/delete-income/${id}`)
+      const response=await Axios.delete(`${baseurl}/api/manager/delete-income/${id}`)
       console.log(response);
      }
      catch(error){
@@ -72,7 +72,7 @@ const Profile = () => {
 
   const fetchExpense = async () => {
     try {
-      const response = await axios.get(`${baseurl}/api/manager/get-expenses/${email}`);
+      const response = await Axios.get(`${baseurl}/api/manager/get-expenses/${email}`);
       console.log(response.data);
       setExpense(response.data);
       // Calculate total income
@@ -98,7 +98,7 @@ const Profile = () => {
 
     // const id=incomes._id
      try{
-      const response=await axios.delete(`${baseurl}/api/manager/delete-expense/${id}`)
+      const response=await Axios.delete(`${baseurl}/api/manager/delete-expense/${id}`)
       console.log(response);
      }
      catch(error){

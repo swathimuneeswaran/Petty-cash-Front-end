@@ -11,7 +11,7 @@ const ResetPassword = () => {
     const baseurl="https://petty-cash-back-end.onrender.com"
     
     const navigate=useNavigate()
-  
+    Axios.defaults.withCredentials = true;
     const handleSubmit = (e) => {
       e.preventDefault();
       Axios.post(`${baseurl}/api/manager/reset-password/${token}`, {
