@@ -17,7 +17,7 @@ const AddIncome = () => {
 
   const navigate=useNavigate()
 
-  // Axios.defaults.withCredentials = true;
+  Axios.defaults.withCredentials = true;
   const handleSubmit = async (e) => {
     e.preventDefault();
     await Axios.post(`${baseurl}/api/manager/add-income`, {
@@ -26,6 +26,8 @@ const AddIncome = () => {
       amount,
       category,
       description,
+    }, {
+      withCredentials:true
     }
     ).then(response => {
       if (response) {
