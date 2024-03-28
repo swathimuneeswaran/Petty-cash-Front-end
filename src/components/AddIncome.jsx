@@ -26,7 +26,10 @@ const AddIncome = () => {
       amount,
       category,
       description,
-    }).then(response => {
+    }, {
+      withCredentials:true
+    }
+    ).then(response => {
       if (response) {
         toast.success("Your Income has been added💲");
         navigate("/profile");
