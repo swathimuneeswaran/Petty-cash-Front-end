@@ -28,14 +28,15 @@ const AddIncome = () => {
       description,
       
     }).then(response => {
-      if (response.data) {
+      if (response) {
+        toast.success("Your Income has been added💲")
+        navigate("/profile");
         if (response.data.message === 'no token') {
           navigate("/login")
           toast.error("Session expired. Please login.");
           return; // Exit the function early to prevent further processing
       }
-        toast.success("Your Income has been added💲")
-        navigate("/profile");
+        
       }
       console.log(response);
     }).catch(err => {
