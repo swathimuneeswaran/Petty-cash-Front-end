@@ -10,7 +10,7 @@ const Login = () => {
   const baseurl="https://petty-cash-back-end.onrender.com"
   const navigate = useNavigate();
 
-  // axios.defaults.withCredentials = true;
+  axios.defaults.withCredentials = true;
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post(`${baseurl}/api/manager/login`, {
