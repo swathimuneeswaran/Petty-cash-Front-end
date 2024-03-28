@@ -29,11 +29,6 @@ const AddExpense = () => {
      
     }).then(response => {
       if (response) {
-        if (response.data.message === 'no token') {
-          navigate("/login")
-          toast.error("Session expired. Please login.");
-          return; // Exit the function early to prevent further processing
-      }
         toast.success("Your expense has been added")
         navigate("/profile");
       }

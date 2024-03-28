@@ -33,11 +33,6 @@ const Profile = () => {
     try {
       const response = await Axios.get(`${baseurl}/api/manager/get-incomes/${email}`);
       console.log(response.data);
-      if (response.data.message === 'no token') {
-        navigate("/login")
-        toast.error("Session expired. Please login.");
-        return; // Exit the function early to prevent further processing
-    }
       setIncomes(response.data);
       
       // Calculate total income
