@@ -27,7 +27,7 @@ const Profile = () => {
 
 
   Axios.defaults.withCredentials=true;
-  const baseurl = "https://petty-cash-back-end.onrender.com";
+  const baseurl = "https://petty-cash-back-end-06d4.onrender.com";
 
   const fetchIncomes = async () => {
     try {

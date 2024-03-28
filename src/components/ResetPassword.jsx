@@ -8,7 +8,7 @@ const ResetPassword = () => {
    
     const [password, setPassword] = useState("");
     const {token}=useParams()
-    const baseurl="https://petty-cash-back-end.onrender.com"
+    const baseurl="https://petty-cash-back-end-06d4.onrender.com"
     
     const navigate=useNavigate()
     // Axios.defaults.withCredentials = true;

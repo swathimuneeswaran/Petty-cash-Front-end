@@ -8,7 +8,7 @@ const ForgotPassword = () => {
     const [email, setEmail] = useState("");
     const navigate = useNavigate();
 
-    const baseurl="https://petty-cash-back-end.onrender.com"
+    const baseurl="https://petty-cash-back-end-06d4.onrender.com"
                
     // Axios.defaults.withCredentials = true;
     const handleSubmit = (e) => {

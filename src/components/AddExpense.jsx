@@ -12,7 +12,7 @@ const AddExpense = () => {
   const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
   const [email, setEmail] = useState("");
-  const baseurl="https://petty-cash-back-end.onrender.com"
+  const baseurl="https://petty-cash-back-end-06d4.onrender.com"
 
   const navigate=useNavigate()
 
