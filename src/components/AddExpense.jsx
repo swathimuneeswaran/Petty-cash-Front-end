@@ -16,7 +16,7 @@ const AddExpense = () => {
 
   const navigate=useNavigate()
 
-  Axios.defaults.withCredentials = true;
+  // Axios.defaults.withCredentials = true;
 
   const handleSubmit = async (e) => {
     e.preventDefault();

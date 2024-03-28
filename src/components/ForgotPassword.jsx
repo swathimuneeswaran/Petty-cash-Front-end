@@ -10,7 +10,7 @@ const ForgotPassword = () => {
 
     const baseurl="https://petty-cash-back-end.onrender.com"
                
-    Axios.defaults.withCredentials = true;
+    // Axios.defaults.withCredentials = true;
     const handleSubmit = (e) => {
         e.preventDefault();
         Axios.post(`${baseurl}/api/manager/forgot-password`, {

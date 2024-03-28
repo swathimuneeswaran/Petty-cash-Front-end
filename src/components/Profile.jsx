@@ -6,7 +6,7 @@ import Axios from "axios";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faIndianRupeeSign } from '@fortawesome/free-solid-svg-icons';
 import {toast} from "react-hot-toast"
-import {Chart as ChartJS,ArcElement,Legend,Tooltip} from "chart.js"
+// import {Chart as ChartJS,ArcElement,Legend,Tooltip} from "chart.js"
 import Chart from "./Chart.jsx"
 
 
