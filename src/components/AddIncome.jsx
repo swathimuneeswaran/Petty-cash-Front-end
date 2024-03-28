@@ -26,8 +26,6 @@ const AddIncome = () => {
       amount,
       category,
       description,
-    }, {
-      withCredentials:true
     }
     ).then(response => {
       if (response) {
