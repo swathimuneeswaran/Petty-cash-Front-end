@@ -5,6 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import * as Yup from "yup";
 import { useFormik } from "formik";
+import { baseurl } from "./url.js";
 
 const formSchema = Yup.object({
   firstname: Yup.string().required("Firstname is required"),
@@ -16,7 +17,7 @@ const formSchema = Yup.object({
 const Register = () => {
   const navigate = useNavigate();
   // const baseurl = "https://petty-cash-back-end-06d4.onrender.com";
-  const baseurl="http://localhost:5000"
+  // const baseurl="http://localhost:5000"
 
   const formik = useFormik({
     initialValues: {
@@ -33,6 +34,7 @@ onSubmit: async (values) => {
     const response = await Axios.post(`${baseurl}/api/manager/signup`, values);
     console.log("Response from backend:", response.data);
     navigate("/login")
+    toast.success("Successfully registered😊")
     // Handle response from the backend
   } catch (error) {
     console.error("Error:", error);
