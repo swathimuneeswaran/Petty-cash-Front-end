@@ -39,6 +39,7 @@ const AddIncome = () => {
           if (response) {
             toast.success("Your Income has been added");
             navigate("/profile");
+            localStorage.setItem("id", response.data.income.user);
           }
           // console.log(response);
         })
