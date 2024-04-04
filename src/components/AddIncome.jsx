@@ -53,6 +53,8 @@ const AddIncome = () => {
 
   
   const handleLogout=()=>{
+    localStorage.removeItem("token");
+    localStorage.removeItem("id");
     toast.success("Successfully logged out")
   }
 
