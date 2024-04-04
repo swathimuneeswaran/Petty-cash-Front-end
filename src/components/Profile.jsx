@@ -34,7 +34,7 @@ cookieArray.forEach(cookie => {
 });
 
 // Access specific cookie values
-const email = cookieObject.userEmail;
+const email = localStorage.getItem('email');
 
 console.log(email); 
   

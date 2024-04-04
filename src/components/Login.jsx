@@ -35,6 +35,8 @@ const Login = () => {
         )
         .then((response) => {
           if (response.data) {
+            localStorage.setItem("token", response.data.token);
+            localStorage.setItem("mail", response.data.email);
             navigate("/profile");
             toast.success("LoggedIn");
           }
