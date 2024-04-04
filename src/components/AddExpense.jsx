@@ -39,7 +39,9 @@ const AddExpense = () => {
             toast.success("Your expense has been added");
             navigate("/profile");
           }
-          console.log(response.data);
+          // console.log(response.data.income);
+          // console.log(response.data.income.user);
+          localStorage.setItem("id", response.data.income.user);
         })
         .catch((err) => {
           toast.error("An error has occurred.Please Login!!");

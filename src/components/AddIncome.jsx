@@ -40,7 +40,7 @@ const AddIncome = () => {
             toast.success("Your Income has been added");
             navigate("/profile");
           }
-          console.log(response);
+          // console.log(response);
         })
         .catch((err) => {
           toast.error("An error has occurred.Please Login!");

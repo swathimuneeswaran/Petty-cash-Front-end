@@ -38,7 +38,7 @@ const ForgotPassword = () => {
                 toast.success("mail sent to your registered Mail Id")
                 navigate("/login");
               }
-              console.log(response);
+              // console.log(response);
             })
             .catch((err) => {
               console.log(err);

@@ -28,11 +28,11 @@ const Register = () => {
     },
     // Inside the onSubmit function in your React component
 onSubmit: async (values) => {
-  console.log("Form values:", values); // Log form values before sending the request
+  // console.log("Form values:", values); // Log form values before sending the request
 
   try {
     const response = await Axios.post(`${baseurl}/api/manager/signup`, values);
-    console.log("Response from backend:", response.data);
+    // console.log("Response from backend:", response.data);
     navigate("/login")
     toast.success("Successfully registered😊")
     // Handle response from the backend

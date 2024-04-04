@@ -34,9 +34,9 @@ cookieArray.forEach(cookie => {
 });
 
 // Access specific cookie values
-const email = localStorage.getItem('email');
+const id = localStorage.getItem('id');
 
-console.log(email); 
+// console.log(id); 
   
 
 
@@ -48,8 +48,8 @@ console.log(email);
 
   const fetchIncomes = async () => {
     try {
-      const response = await Axios.get(`${baseurl}/api/manager/get-incomes/${email}`);
-      console.log(response.data);
+      const response = await Axios.get(`${baseurl}/api/manager/get-incomes/${id}`);
+      // console.log(response.data);
       setIncomes(response.data);
       
       // Calculate total income
@@ -84,8 +84,8 @@ console.log(email);
 
   const fetchExpense = async () => {
     try {
-      const response = await Axios.get(`${baseurl}/api/manager/get-expenses/${email}`);
-      console.log(response.data);
+      const response = await Axios.get(`${baseurl}/api/manager/get-expenses/${id}`);
+      // console.log(response.data);
       setExpense(response.data);
       // Calculate total income
       const total = response.data.reduce((acc, expense) => acc + expense.amount, 0);
@@ -225,7 +225,7 @@ const handleLogout=()=>{
             </section>
           </div>
           <div>
-            <section className="bg-dark van" style={{ border: "1px solid black", color: "white", width: "300px", height: "130px", padding: "20px", borderRadius: "20px",marginTop:"50px",border:"2px solid white",boxShadow:"4px 4px 4px  violet" }}>
+            <section className="bg-dark van" style={{  color: "white", width: "300px", height: "130px", padding: "20px", borderRadius: "20px",marginTop:"50px",border:"2px solid white",boxShadow:"4px 4px 4px  violet" }}>
               <h3 style={{ textAlign: "center" ,fontFamily: "cursive", fontWeight: "bolder",textShadow:"2px 1.5px  violet"}}>💰Expenses</h3>
               <hr />
               <p>Total Expenses:  <FontAwesomeIcon icon={faIndianRupeeSign} style={{fontSize:"12px",color:"yellow"}}/> {totalExp}</p>

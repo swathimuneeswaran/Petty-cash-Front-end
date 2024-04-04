@@ -28,7 +28,7 @@ const ResetPassword = () => {
             toast.success("Password Updated Successfully");
             navigate("/login");
           }
-          console.log(response.data);
+          // console.log(response.data);
         })
         .catch((err) => {
           console.log(err);

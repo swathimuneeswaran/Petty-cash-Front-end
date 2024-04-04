@@ -36,11 +36,11 @@ const Login = () => {
         .then((response) => {
           if (response.data) {
             localStorage.setItem("token", response.data.token);
-            localStorage.setItem("mail", response.data.email);
+            // localStorage.setItem("mail", response.data.email);
             navigate("/profile");
             toast.success("LoggedIn");
           }
-          console.log(response);
+          // console.log(response);
         })
         .catch((err) => {
           console.log(err);
