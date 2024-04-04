@@ -7,10 +7,10 @@ ChartJS.register(ArcElement,Legend,Tooltip)
 
 
 
-const Chart = ({data}) => {
+const Chart = ({data,options}) => {
   return (
     <div>
-    <Pie data={data} />
+    <Pie data={data} options={options} />
     </div>
   )
 }

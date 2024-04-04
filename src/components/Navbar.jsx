@@ -6,9 +6,9 @@ import {toast} from "react-hot-toast"
 const Navbar = () => {
     // const dispatch = useDispatch(); // Corrected usage of useDispatch
 
-    const handleLogout=()=>{
-      toast.success("Successfully logged out")
-    }
+    // const handleLogout=()=>{
+    //   toast.success("Successfully logged out")
+    // }
 
     return (
         <>
@@ -38,7 +38,7 @@ const Navbar = () => {
                         <form className='d-flex'>
                             <Link to ="/add-expense" className="btn btn-danger me-2">New Expense</Link>
                             <Link to ="/add-income" className="btn btn-success me-2">New Income</Link>
-                            <Link to="/" onClick={handleLogout} className='btn btn-warning me-2'>Logout</Link>
+                            {/* <Link to="/" onClick={handleLogout} className='btn btn-warning me-2'>Logout</Link> */}
                         </form>
                     </div>
                 </div>
