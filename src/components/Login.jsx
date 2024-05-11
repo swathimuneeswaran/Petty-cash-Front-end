@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 import { useNavigate, Link } from "react-router-dom";
 import * as Yup from "yup";
 import { useFormik } from "formik";
-import { baseurl } from "./url.js";
+
 
 const formSchema = Yup.object({
   email: Yup.string().required("Email is required"),
@@ -24,7 +24,7 @@ const Login = () => {
     onSubmit: (values) => {
       axios
         .post(
-          `${baseurl}/api/manager/login`,
+          `/api/manager/login`,
           {
             email: values.email,
             password: values.password,

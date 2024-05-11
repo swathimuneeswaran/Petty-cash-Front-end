@@ -3,7 +3,6 @@ import "../App.css";
 import Axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-hot-toast";
-import { baseurl } from "./url.js";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 
@@ -20,7 +19,7 @@ const ResetPassword = () => {
       password: "",
     },
     onSubmit: async (values) => {
-      Axios.post(`${baseurl}/api/manager/reset-password/${token}`, {
+      Axios.post(`/api/manager/reset-password/${token}`, {
         password: values.password,
       })
         .then((response) => {

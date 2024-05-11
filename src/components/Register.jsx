@@ -5,7 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import * as Yup from "yup";
 import { useFormik } from "formik";
-import { baseurl } from "./url.js";
+
 
 const formSchema = Yup.object({
   firstname: Yup.string().required("Firstname is required"),
@@ -31,7 +31,7 @@ onSubmit: async (values) => {
   // console.log("Form values:", values); // Log form values before sending the request
 
   try {
-    const response = await Axios.post(`${baseurl}/api/manager/signup`, values);
+    const response = await Axios.post(`/api/manager/signup`, values);
     // console.log("Response from backend:", response.data);
     navigate("/login")
     toast.success("Successfully registered😊")

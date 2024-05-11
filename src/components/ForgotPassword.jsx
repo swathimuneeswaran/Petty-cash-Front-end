@@ -3,7 +3,7 @@ import "../App.css";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import {toast} from "react-hot-toast";
-import { baseurl } from "./url.js";
+// import { baseurl } from "./url.js";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 
@@ -24,7 +24,7 @@ const ForgotPassword = () => {
         onSubmit: async(values) => {
           Axios
             .post(
-              `${baseurl}/api/manager/forgot-password`,
+              `/api/manager/forgot-password`,
               {
                 email: values.email,
                

@@ -9,7 +9,7 @@ import { faIndianRupeeSign } from '@fortawesome/free-solid-svg-icons';
 import {toast} from "react-hot-toast"
 // import {Chart as ChartJS,ArcElement,Legend,Tooltip} from "chart.js"
 import Chart from "./Chart.jsx"
-import { baseurl } from "./url.js";
+
 
 
 
@@ -48,7 +48,7 @@ const id = localStorage.getItem('id');
 
   const fetchIncomes = async () => {
     try {
-      const response = await Axios.get(`${baseurl}/api/manager/get-incomes/${id}`);
+      const response = await Axios.get(`/api/manager/get-incomes/${id}`);
       // console.log(response.data);
       setIncomes(response.data);
       
@@ -72,7 +72,7 @@ const id = localStorage.getItem('id');
 
     // const id=incomes._id
      try{
-      const response=await Axios.delete(`${baseurl}/api/manager/delete-income/${id}`)
+      const response=await Axios.delete(`/api/manager/delete-income/${id}`)
       console.log(response);
      }
      catch(error){
@@ -84,7 +84,7 @@ const id = localStorage.getItem('id');
 
   const fetchExpense = async () => {
     try {
-      const response = await Axios.get(`${baseurl}/api/manager/get-expenses/${id}`);
+      const response = await Axios.get(`/api/manager/get-expenses/${id}`);
       // console.log(response.data);
       setExpense(response.data);
       // Calculate total income
@@ -110,7 +110,7 @@ const id = localStorage.getItem('id');
 
     // const id=incomes._id
      try{
-      const response=await Axios.delete(`${baseurl}/api/manager/delete-expense/${id}`)
+      const response=await Axios.delete(`/api/manager/delete-expense/${id}`)
       console.log(response);
      }
      catch(error){

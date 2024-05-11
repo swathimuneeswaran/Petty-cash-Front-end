@@ -6,7 +6,7 @@ import { toast } from "react-hot-toast";
 import "../App.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { baseurl } from "./url.js";
+// import { baseurl } from "./url.js";
 
 const formSchema = Yup.object({
   email: Yup.string().required("Email is required!"),
@@ -28,7 +28,7 @@ const AddIncome = () => {
       description: "",
     },
     onSubmit: async (values) => {
-      await Axios.post(`${baseurl}/api/manager/add-income`, {
+      await Axios.post(`/api/manager/add-income`, {
         email:values.email,
         title:values.title,
         amount:values.amount,
